@@ -1,16 +1,18 @@
-POC for purestake to demonstrate subgraph issue
+<h1>POC for purestake to demonstrate subgraph issue</h1>
 
-Running this subgraph locally against https://rpc.api.moonriver.moonbeam.network will return accurate data
-
-Running this subgraph using thegraphs hosted service will return inaccurate data.
-
+<h3>tldr</h3>
+-Running this subgraph locally against https://rpc.api.moonriver.moonbeam.network will return accurate data
 
 
-
+-Running this subgraph using thegraphs hosted service will return inaccurate data.
 
 
 
-More details:
+
+
+
+
+<h3>More details:</h3>
 <b/>
 Event data is accurate but contract calls within the sRomeERC20.handleLogRebase event handler will return inaccurate data. The inaccurate fields are Rebase.stakedRomes and Rebase.romePrice. Both of these fields rely on contract calls as opposed to event data. Contract calls were bugged until the latest purestake RPC release.
 
