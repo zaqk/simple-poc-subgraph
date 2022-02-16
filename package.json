@@ -1,0 +1,23 @@
+{
+  "name": "rome",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ rome",
+    "create-local": "graph create --node http://localhost:8020/ rome",
+    "remove-local": "graph remove --node http://localhost:8020/ rome",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 rome",
+    "lint": "eslint src --fix"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.25.0",
+    "@graphprotocol/graph-ts": "0.24.1"
+  },
+  "devDependencies": {
+    "eslint": "<8.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0"
+  }
+}

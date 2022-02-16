@@ -1,0 +1,9 @@
+type Rebase @entity {
+  id: ID!
+  stakedRomes: BigDecimal!
+  contract: String!
+  timestamp: BigInt!
+  epoch: BigInt!
+  index: BigDecimal!
+  romePrice: BigDecimal!
+}

@@ -1,0 +1,31 @@
+specVersion: 0.0.2
+description: Rome DAO Subgraph
+repository: https://github.com/RomeDAO/rome-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+# sRomeERC20
+- kind: ethereum/contract
+  name: sRomeERC20
+  network: moonriver
+  source:
+    address: '0x89f52002e544585b42f8c7cf557609ca4c8ce12a'
+    abi: sRomeERC20
+    startBlock: 991398
+  mapping:
+    kind: ethereum/events
+    apiVersion: 0.0.6
+    language: wasm/assemblyscript
+    entities:
+      - sRomeERC20
+    abis:  
+      - name: sRomeERC20
+        file: ./abis/sRomeERC20.json
+      - name: SolarPair
+        file: ./abis/SolarPair.json
+      - name: RomeERC20
+        file: ./abis/RomeERC20.json
+    eventHandlers:
+      - event: LogRebase(indexed uint256,uint256,uint256)
+        handler: handleLogRebase
+    file: ./src/sRomeERC20.ts
