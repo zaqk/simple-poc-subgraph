@@ -18,7 +18,7 @@ services:
       postgres_pass: let-me-in
       postgres_db: graph-node
       ipfs: 'ipfs:5001'
-      ethereum: 'moonriver:https://rpc.moonriver.moonbeam.network'
+      ethereum: 'moonriver:https://rpc.api.moonriver.moonbeam.network'
       GRAPH_LOG: debug
   ipfs:
     image: ipfs/go-ipfs:v0.4.23

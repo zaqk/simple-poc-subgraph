@@ -1,5 +1,8 @@
 POC for purestake to demonstrate subgraph issue
 
+
+Event data is accurate but calls within the sRomeERC20.handleLogRebase return inaccurate data.
+
 ## local testing
 Make sure docker is running in the background and run:
 ```
